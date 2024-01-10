@@ -1,4 +1,4 @@
-include "main.h"
+include "main.h";
 
 /**
  * _strlen_recursion - prints a reversed string,
@@ -8,7 +8,7 @@ include "main.h"
 
 void _strlen_recursion(*s)
 {
-if(*s == '\0')
+if (*s == '\0')
 {
 return 0;
 }
