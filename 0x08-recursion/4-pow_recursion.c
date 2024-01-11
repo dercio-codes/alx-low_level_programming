@@ -10,12 +10,10 @@ int _pow_recursion(int x, int y)
 {
 if (x == 0 || y == 0 || x == 1 || y == 1)
 {
-printf("Undefined Entry");
 return (1);
 }
 else
 {
 int answer = (x * x);
-printf("here is your number : %d", answer);
 }
 }
