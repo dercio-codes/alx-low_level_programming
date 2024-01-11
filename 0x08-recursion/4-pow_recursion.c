@@ -16,7 +16,7 @@ else
 {
 int answer =  x * _pow_recursion(x , y - 1);
 if (x < 0 || y < 0){
-answer = answer / -1 ;
+return(answer / -1) ;
 }else{
 return(answer);
 }
