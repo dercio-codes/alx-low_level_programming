@@ -15,10 +15,13 @@ return (1);
 else
 {
 int answer =  x * _pow_recursion(x , y - 1);
-if (x < 0 || y < 0){
-return(answer / -1) ;
-}else{
-return(answer);
+if (x < 0 )
+{
+return(-1);
+}
+else
+{
+return(1 * _pow_recursion(x , y + 1));
 }
 return (answer);
 }
