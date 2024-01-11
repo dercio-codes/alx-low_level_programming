@@ -6,7 +6,7 @@
  * @x - interget entered for check
  */
 
-int _pow_recursion(int x , int y)
+int _pow_recursion(int x, int y)
 {
 if (x == 0 || y == 0)
 {
@@ -15,7 +15,7 @@ return (1);
 }
 else
 {
-int answer = (x * x); 
+int answer = (x * x);
 printf("here is your number : %d", answer);
 }
 }
