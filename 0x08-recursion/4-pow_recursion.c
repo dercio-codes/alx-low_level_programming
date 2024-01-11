@@ -6,7 +6,6 @@
  * @x : interget entered for check
  * Return : int
 */
-
 int _pow_recursion(int x, int y)
 {
 if (x == 0 || y == 0)
@@ -15,7 +14,12 @@ return (1);
 }
 else
 {
-int answer =  x * _pow_recursion(x, y - 1);
+int answer =  x * _pow_recursion(x , y - 1);
+if (x < 0 || y < 0){
+answer = answer / -1 ;
+}else{
+return;
+}
 return (answer);
 }
 }
