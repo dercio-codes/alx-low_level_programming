@@ -2,8 +2,8 @@
 
 /**
  * _pow_recursion - returns the power of the given inputs
- * @y - interget entered for check
- * @x - interget entered for check
+ * @y : interget entered for check
+ * @x : interget entered for check
  */
 
 int _pow_recursion(int x, int y)
@@ -15,5 +15,6 @@ return (1);
 else
 {
 int answer = (x * x);
+return (answer);
 }
 }
