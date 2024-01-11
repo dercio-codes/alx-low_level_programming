@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _pow_recursion - returns the power of the given inputs
- * @y : interget entered for check
- * @x : interget entered for check
- * Return : int
-*/
+ * _pow_recursion - power function
+ * @x: value to be raise
+ * @y: raised by value
+ * Return: integer
+ */
 
 int _pow_recursion(int x, int y)
 {
