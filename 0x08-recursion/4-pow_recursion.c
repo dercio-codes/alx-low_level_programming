@@ -14,7 +14,7 @@ return (1);
 }
 else
 {
-int answer = (x * x);
+int answer =  x * _pow_recursion(x , y -1 );
 return (answer);
 }
 }
