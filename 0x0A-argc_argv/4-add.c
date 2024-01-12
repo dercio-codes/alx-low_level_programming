@@ -14,7 +14,7 @@ int i, total;
 for (i = 0; i < argc ; i++)
 {
 total = total + atoi(argv[i]);
-printf("%s\n", argv[i]);
 }
+printf("%d\n", total);
 return (0);
 }
