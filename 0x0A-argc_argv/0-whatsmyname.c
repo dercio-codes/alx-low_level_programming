@@ -1,5 +1,6 @@
 #include <stdio.h>
 
-void whatismyname(int argc , char* argv){
-  printf("%d",argv[argc]);
+int main(int argc , char** argv){
+  printf("%s",argv[argc]);
+  return 0;
 }
