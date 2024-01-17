@@ -3,7 +3,7 @@
 
 /**
 * _puts - swaps the values of two integers
-* @s: string to check for length
+* @str: string to check for length
 * Return: length of the string
 */
 
