@@ -3,26 +3,19 @@
 #include <string.h>
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: unknown number of bytes
- * Return: the new concatenated string
+ * string_len - the length of a string
+ * @str: The string to get the length of.
+ * Return: The length of the string.
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+unsigned int string_len(char *str)
 {
-unsigned int s1_len = stringLength(s1);
-char *result = malloc(s1_len + n + 1);
-
-if (result == NULL)
+if (str == NULL)
 {
-return (NULL);
+return (0);
 }
 else
 {
-strcpy(result, s1);
-strncat(result, s2, n);
-return (result);
+return (strlen(str));
 }
 }
 
@@ -33,7 +26,7 @@ return (result);
  */
 char *string_copy(char *str)
 {
-unsigned int len = stringLength(str);
+unsigned int len = string_len(str);
 char *result = malloc(len + 1);
 
 if (result == NULL)
@@ -48,19 +41,25 @@ return (result);
 }
 
 /**
- * stringLength - the length of string
- * @str: The string to get the length of.
- * Return: The length of the string.
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: unknown number of bytes
+ * Return: the new concatenated string
  */
-unsigned int stringLength(char *str)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-if (str == NULL)
+unsigned int s1_len = string_len(s1);
+char *result = malloc(s1_len + n + 1);
+
+if (result == NULL)
 {
-return (0);
+return (NULL);
 }
 else
 {
-return (strlen(str));
+strcpy(result, s1);
+strncat(result, s2, n);
+return (result);
 }
 }
-
