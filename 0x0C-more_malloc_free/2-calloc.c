@@ -5,7 +5,7 @@
 
 /**
  * _calloc - allocates memory.
- * @nmemb : array of content 
+ * @nmemb : array of content
  * @size : array size
  * Return: Always 0.
  */
