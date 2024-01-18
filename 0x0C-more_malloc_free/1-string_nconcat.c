@@ -5,7 +5,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 void *p = malloc(strlen(s1)+strlen(s2)+1);
-char concatStr[];
+char *concatStr = malloc(strlen(s1) + strlen(s2) + 1 );
 strcpy(concatStr, s1);
 
 if ( p == NULL )
