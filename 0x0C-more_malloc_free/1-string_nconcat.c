@@ -13,12 +13,11 @@ if ( p == NULL )
 return NULL;
 }
 
-if (n >= strlen(s2)){
+if (n < strlen(s2)){
 strncat(concatStr,s2 , n);
 }else{
 strcat(concatStr,s2); 
 }
 
-printf("%s\n",concatStr);
-return p;
+return concatStr;
 }
