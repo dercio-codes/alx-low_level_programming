@@ -1,7 +1,8 @@
+
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 
 /**
  * string_nconcat - concatenates two strings
@@ -19,6 +20,13 @@ if (concatStr == NULL)
 return (NULL);
 }
 strcpy(concatStr, s1);
+if (n < strlen(s2))
+{
 strncat(concatStr, s2, n);
+}
+else
+{
+strcat(concatStr, s2);
+}
 return (concatStr);
 }
