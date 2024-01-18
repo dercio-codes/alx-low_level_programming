@@ -21,5 +21,6 @@ if (result == NULL)
 {
 return (NULL);
 }
+memset(result, 0, nmemb * size);
 return (result);
 }
