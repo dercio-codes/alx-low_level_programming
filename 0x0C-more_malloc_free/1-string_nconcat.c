@@ -1,44 +1,7 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-/**
- * string_len - the length of a string
- * @str: The string to get the length of.
- * Return: The length of the string.
- */
-unsigned int string_len(char *str)
-{
-if (str == NULL)
-{
-return (0);
-}
-else
-{
-return (strlen(str));
-}
-}
-
-/**
- * string_copy - Copies a string into a newly allocated memory block
- * @str: The string to copy.
- * Return: A pointer to a newly allocated string
- */
-char *string_copy(char *str)
-{
-unsigned int len = string_len(str);
-char *result = malloc(len + 1);
-
-if (result == NULL)
-{
-return (NULL);
-}
-else
-{
-strcpy(result, str);
-return (result);
-}
-}
 
 /**
  * string_nconcat - concatenates two strings
@@ -47,19 +10,24 @@ return (result);
  * @n: unknown number of bytes
  * Return: the new concatenated string
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int s1_len = string_len(s1);
-char *result = malloc(s1_len + n + 1);
-
-if (result == NULL)
+char *concatStr = malloc(strlen(s1) + strlen(s2) + 1);
+if (concatStr == NULL)
 {
 return (NULL);
 }
-else
+if (s1 == NULL)
 {
-strcpy(result, s1);
-strncat(result, s2, n);
-return (result);
+s1 = "";
 }
+if (s2 == NULL)
+{
+s2 = "";
+}
+strcpy(concatStr, s1);
+strncat(concatStr, s2, n);
+
+return (concatStr);
 }
