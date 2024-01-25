@@ -8,19 +8,17 @@
  *
  * Return: Result of operation
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
-  int i,total = 0;
-  va_list args;
+int sum = 0;
+unsigned int i;
+va_list argp;
+va_start(argp, n);
 
-  va_start(args,n);
-
-for (i=0 ; i < (int)n ; i ++)
-        {
-          int current = va_arg(args , int);
-          total = total + current;
-        }
-  va_end(args);
-  return (total);
+for (i = 0; i < n; i++)
+{
+sum += va_arg(argp, int);
+}
+va_end(argp);
+return (sum);
 }
